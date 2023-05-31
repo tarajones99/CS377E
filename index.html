@@ -5,88 +5,143 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>TechWise</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>TechWise</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick-theme.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+		
+        #slideshow {
+        overflow: hidden;
+        height: 510px;
+        width: 728px;
+        margin: 0 auto;
+    }
+     
+    /* Style each of the sides
+    with a fixed width and height */
+     
+    .slide {
+        float: left;
+        height: 510px;
+        width: 728px;
+    }
+     
+    /* Add animation to the slides */
+     
+    .slide-wrapper {
+         
+        /* Calculate the total width on the
+      basis of number of slides */
+        width: calc(728px * 4);
+         
+        /* Specify the animation with the
+      duration and speed */
+        animation: slide 10s ease infinite;
+    }
+     
+     
+    /* Define the animation
+    for the slideshow */
+     
+    @keyframes slide {
+         
+        /* Calculate the margin-left for
+      each of the slides */
+        20% {
+            margin-left: 0px;
+        }
+        40% {
+            margin-left: calc(-728px * 1);
+        }
+        60% {
+            margin-left: calc(-728px * 2);
+        }
+        80% {
+            margin-left: calc(-728px * 3);
+        }
+    }
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#intro">About TechWise</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">Process</a></li>
-							<li><a href="#three">Final Prototype</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+    </style>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- Sidebar -->
+<section id="sidebar">
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="#intro">Welcome</a></li>
+                <li><a href="#intro">About TechWise</a></li>
+                <li><a href="#one">Who we are</a></li>
+                <li><a href="#two">Process</a></li>
+                <li><a href="#three">Final Prototype</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>TechWise</h1>
-							<a href="#" class="image">
-								<img src="images/logo.png" alt="" data-position="center center" style="width: 100px; height: 100px;" />
-							  </a>
-							<p>Empowering older adults to have fun pursuing technology education and navigating the digital world securely. 
-							</p>
-							<ul class="actions">
-								<li><a href="#zero" class="button scrolly">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+<!-- Wrapper -->
+<div id="wrapper">
 
-				<!-- Two -->
+    <!-- Intro -->
+    <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+            <h1>TechWise</h1>
+            <a href="#" class="image">
+                <img src="images/logo.png" alt="" data-position="center center" style="width: 100px; height: 100px;" />
+            </a>
+            <p>Empowering older adults to have fun pursuing technology education and navigating the digital world securely.
+            </p>
+            <ul class="actions">
+                <li><a href="#zero" class="button scrolly">Learn more</a></li>
+            </ul>
+        </div>
+    </section>
+
+				<!--zero -->
+
 				<section id="zero" class="wrapper style3 fade-up">
 					<div class="inner">
 						<h2>About TechWise</h2>
-						<p></p>
-						<div class="features">
-							<section>
-								<p>Techwise is about empowering older adults to continue learning about technology by combining gaming with personalized education. 
-									We leverage foundation models to try and best replicate what it would be like for our user to be learning from a real person. 
-									By encouraging users to incoorporate the technologies they already use in their day to day life, we combine this with their
-									learning goals to create continued learning opportunities not only about what a technology is, but also how 
-									it can be incoorporated into their real life.
-								</p>
-							</section>
-							<section>
-								<!-- <img src="images/home.png" alt="" data-position="center center" style="width: 100px; height: 100px;" /> -->
-								<img src="images/home.png" alt="" data-position="center center"  />
-							</section>
-							<section>
-								<!-- <img src="images/home.png" alt="" data-position="center center" style="width: 100px; height: 100px;" /> -->
-								<img src="images/learning.png" alt="" data-position="center center"  />
-							</section>
-							<section>
-								<!-- <img src="images/home.png" alt="" data-position="center center" style="width: 100px; height: 100px;" /> -->
-								<img src="images/store.png" alt="" data-position="center center"  />
-							</section>
-							<section>
-								<!-- <img src="images/home.png" alt="" data-position="center center" style="width: 100px; height: 100px;" /> -->
-								<img src="images/buying.png" alt="" data-position="center center"  />
-							</section>
-							<section>
-								<!-- <img src="images/home.png" alt="" data-position="center center" style="width: 100px; height: 100px;" /> -->
-								<img src="images/item.png" alt="" data-position="center center"  />
-							</section>
-						</div>
-						<ul class="actions">
-							<li><a href="generic.html" class="button">Learn more</a></li>
-						</ul>
+						<section>
+							<p>Techwise is about empowering older adults to continue learning about technology by combining gaming with personalized education.
+								We leverage foundation models to try and best replicate what it would be like for our user to be learning from a real person.
+								By encouraging users to incorporate the technologies they already use in their day-to-day life, we combine this with their
+								learning goals to create continued learning opportunities not only about what a technology is but also how
+								it can be incorporated into their real life.
+							</p>
+						</section>
+						<section>
+							<div id="slideshow">
+								<div class="slide-wrapper">
+									<!-- Define each of the slides and write the content -->
+									<div class="slide">
+										<img src="images/home.png" alt="" data-position="center center" />
+									</div>
+									<div class="slide">
+										<img src="images/learning.png" alt="" data-position="center center" />
+									</div>
+									<div class="slide">
+										<img src="images/store.png" alt="" data-position="center center" />
+									</div>
+									<div class="slide">
+										<img src="images/buying.png" alt="" data-position="center center" />
+									</div>
+									<div class="slide">
+										<img src="images/item.png" alt="" data-position="center center" />
+									</div>
+								</div>
+								 <div id="dots"></div> <!-- Add the dots container -->
+							</div>
+						</section>
 					</div>
 				</section>
+				
 
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
@@ -266,7 +321,51 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var slideshow = document.querySelector('.slideshow');
+				var images = slideshow.getElementsByTagName('img');
+				var currentIndex = 0;
+			
+				function showImage(index) {
+					for (var i = 0; i < images.length; i++) {
+						images[i].classList.remove('active');
+					}
+					images[index].classList.add('active');
+				}
+			
+				function nextImage() {
+					currentIndex = (currentIndex + 1) % images.length;
+					showImage(currentIndex);
+				}
+			
+				setInterval(nextImage, 3000); // Change slide every 3 seconds (adjust as desired)
+			</script>
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+			<style>
+    .slideshow {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Adjust the height as needed */
+        overflow: hidden;
+    }
+
+    .slideshow img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .slideshow img.active {
+        opacity: 1;
+    }
+</style>
 
 	</body>
+
 
 </html>

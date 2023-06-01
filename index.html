@@ -66,6 +66,11 @@
         }
     }
 
+	#dynamic-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
     </style>
 </head>
 <body class="is-preload">
@@ -121,19 +126,19 @@
 								<div class="slide-wrapper">
 									<!-- Define each of the slides and write the content -->
 									<div class="slide">
-										<img src="images/home.png" alt="" data-position="center center" />
+										<img id="dynamic-image" src="images/home.png" alt="" data-position="center center"/>
 									</div>
 									<div class="slide">
-										<img src="images/learning.png" alt="" data-position="center center" />
+										<img id="dynamic-image" src="images/learning.png" alt="" data-position="center center" />
 									</div>
 									<div class="slide">
-										<img src="images/store.png" alt="" data-position="center center" />
+										<img id="dynamic-image" src="images/store.png" alt="" data-position="center center" />
 									</div>
 									<div class="slide">
-										<img src="images/buying.png" alt="" data-position="center center" />
+										<img id="dynamic-image" src="images/buying.png" alt="" data-position="center center" />
 									</div>
 									<div class="slide">
-										<img src="images/item.png" alt="" data-position="center center" />
+										<img id="dynamic-image" src="images/item.png" alt="" data-position="center center" />
 									</div>
 								</div>
 								 <div id="dots"></div> <!-- Add the dots container -->
@@ -323,6 +328,29 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+				window.addEventListener('DOMContentLoaded', function() {
+				  var image = document.getElementById('dynamic-image');
+				  var container = image.parentElement;
+			
+				  function resizeImage() {
+					var containerWidth = container.offsetWidth;
+					var containerHeight = container.offsetHeight;
+			
+					if (containerWidth / containerHeight > image.naturalWidth / image.naturalHeight) {
+					  image.style.width = '100%';
+					  image.style.height = 'auto';
+					} else {
+					  image.style.width = 'auto';
+					  image.style.height = '100%';
+					}
+				  }
+			
+				  window.addEventListener('resize', resizeImage);
+				  image.addEventListener('load', resizeImage);
+				  resizeImage();
+				});
+			  </script>
+			<script>
 				var slideshow = document.querySelector('.slideshow');
 				var images = slideshow.getElementsByTagName('img');
 				var currentIndex = 0;
@@ -365,6 +393,7 @@
         opacity: 1;
     }
 </style>
+
 
 	</body>
 

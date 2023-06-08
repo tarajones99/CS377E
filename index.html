@@ -14,63 +14,83 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.9.0/slick-theme.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-		
         #slideshow {
-        overflow: hidden;
-        height: 510px;
-        width: 728px;
-        margin: 0 auto;
-    }
-     
-    /* Style each of the sides
-    with a fixed width and height */
-     
-    .slide {
-        float: left;
-        height: 510px;
-        width: 728px;
-    }
-     
-    /* Add animation to the slides */
-     
-    .slide-wrapper {
-         
-        /* Calculate the total width on the
-      basis of number of slides */
-        width: calc(728px * 4);
-         
-        /* Specify the animation with the
-      duration and speed */
-        animation: slide 10s ease infinite;
-    }
-     
-     
-    /* Define the animation
-    for the slideshow */
-     
-    @keyframes slide {
-         
-        /* Calculate the margin-left for
-      each of the slides */
-        20% {
-            margin-left: 0px;
+            overflow: hidden;
+            height: 510px;
+            width: 728px;
+            margin: 0 auto;
         }
-        40% {
-            margin-left: calc(-728px * 1);
-        }
-        60% {
-            margin-left: calc(-728px * 2);
-        }
-        80% {
-            margin-left: calc(-728px * 3);
-        }
-    }
 
-	#dynamic-image {
-      max-width: 100%;
-      max-height: 100%;
-    }
+        /* Style each of the slides with a fixed width and height */
+        .slide {
+            float: left;
+            height: 510px;
+            width: 728px;
+        }
 
+        /* Add animation to the slides */
+        .slide-wrapper {
+            /* Calculate the total width on the basis of number of slides */
+            width: calc(728px * 8);
+            /* Specify the animation with the duration and speed */
+            animation: slide 20s ease infinite;
+        }
+
+        /* Define the animation for the slideshow */
+        @keyframes slide {
+            /* Calculate the margin-left for each of the slides */
+            12.5% {
+                margin-left: 0px;
+            }
+            25% {
+                margin-left: calc(-728px * 1);
+            }
+            37.5% {
+                margin-left: calc(-728px * 2);
+            }
+            50% {
+                margin-left: calc(-728px * 3);
+            }
+            62.5% {
+                margin-left: calc(-728px * 4);
+            }
+            75% {
+                margin-left: calc(-728px * 5);
+            }
+            87.5% {
+                margin-left: calc(-728px * 6);
+            }
+            100% {
+                margin-left: calc(-728px * 7);
+            }
+        }
+
+        #dynamic-image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+		/* Add styles for the dots container */
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        /* Add styles for each dot */
+        .dot {
+            height: 10px;
+            width: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        /* Add active dot style */
+        .dot.active {
+            background-color: #717171;
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -129,7 +149,13 @@
 										<img id="dynamic-image" src="images/home.png" alt="" data-position="center center"/>
 									</div>
 									<div class="slide">
+										<img id="dynamic-image" src="images/space.png" alt="" data-position="center center"/>
+									</div>
+									<div class="slide">
 										<img id="dynamic-image" src="images/learning.png" alt="" data-position="center center" />
+									</div>
+									<div class="slide">
+										<img id="dynamic-image" src="images/game.png" alt="" data-position="center center" />
 									</div>
 									<div class="slide">
 										<img id="dynamic-image" src="images/store.png" alt="" data-position="center center" />
@@ -138,7 +164,10 @@
 										<img id="dynamic-image" src="images/buying.png" alt="" data-position="center center" />
 									</div>
 									<div class="slide">
-										<img id="dynamic-image" src="images/item.png" alt="" data-position="center center" />
+										<img id="dynamic-image" src="images/buy.png" alt="" data-position="center center" />
+									</div>
+									<div class="slide">
+										<img id="dynamic-image" src="images/place.png" alt="" data-position="center center" />
 									</div>
 								</div>
 								 <div id="dots"></div> <!-- Add the dots container -->
@@ -203,7 +232,7 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>Projects</h2>
+							<h2>Process</h2>
 							<p></p>
 							<div class="features">
 								<section>
@@ -288,15 +317,23 @@
 								</section>
 								<section>
 									<span class="icon solid major fa-desktop"></span>
+									<h3>Final Poster</h3>
+									<ul>
+										<li><a href="cs377e/A10/TechWisePoster.pdf" target="_blank">Poster</a></li>
+									</ul>
+								</section>
+								<section>
+									<span class="icon solid major fa-desktop"></span>
 									<h3>Final Medium-fi Prototype + Presentations</h3>
 									<ul>
-										<li><a href="" target="_blank">Final Prototype</a></li>
-										<li><a href="cs377e/A07/Testing Plan.pdf" target="_blank">README</a></li>
-										<li><a href="cs377e/A07/User Test Summary.pdf" target="_blank">Summary of Design Changes</a></li>
-										<li><a href="cs377e/A07/Med-Fi #2 and Usability.pdf" target="_blank">Final Presentation Slides</a></li>
+										<li><a href="https://www.figma.com/proto/fsI1EIlHYHE7ANcDAgz0nP/Med-Fi-Prototype-Final?type=design&node-id=902-283&scaling=scale-down&page-id=203%3A162&starting-point-node-id=902%3A283&show-proto-sidebar=1" target="_blank">Final Prototype</a></li>
+										<li><a href="cs377e/A11/TechWise README (1).pdf" target="_blank">README</a></li>
+										<li><a href="cs377e/A11/Summary of Design Changes.pdf" target="_blank">Summary of Design Changes</a></li>
+										<li><a href="cs377e/A11/Techwise.pdf" target="_blank">Final Presentation Slides</a></li>
 									</ul>
 								</section>
 								</section>
+								
 								
 								
 							</div>
@@ -307,10 +344,16 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Prototype</h2>
-							<p>Final Prototype in the works!</p>
-			
-						
+							<h2>Our final prototype</h2>		
+							<p> Our final prototype builds on all the work across the quarter. From needfinding, low-fi prototypes, to user testing, to iterating 
+								out medium-fi Figma prototype multiple times, this prototype is the culmination of the design process. 
+								
+								You can find out final Medium-fi prototype below:
+							</p>	
+							<ul style="list-style-type: none; padding: 0; margin: 0;">
+								<li><a href="https://www.figma.com/proto/fsI1EIlHYHE7ANcDAgz0nP/Med-Fi-Prototype-Final?type=design&node-id=902-283&scaling=scale-down&page-id=203%3A162&starting-point-node-id=902%3A283&show-proto-sidebar=1" target="_blank" style="text-decoration: underline;">Final Prototype</a></li>
+							</ul>
+							
 							</div>
 						</div>
 					</section>
